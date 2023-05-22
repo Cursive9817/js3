@@ -1,0 +1,58 @@
+<html>
+	<head>
+	</head>
+		<body bgcolor="#9370DB">
+	<center>
+		<textarea name="nazwa" cols="60" rows="30" disabled>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zad 86 - Bańka</title>
+	<script>
+		function przycisk1_banka() {
+			var date = new Date(document.lastModified);
+			var formattedDate = date.toLocaleDateString();
+			alert("Ostatnia data modyfikacji: " + formattedDate);
+		}
+
+		function przycisk2_banka() {
+			var date = new Date();
+			var formattedDate = date.toLocaleDateString();
+			alert("Aktualna data: " + formattedDate);
+		}
+
+		function przycisk3_banka() {
+			var date = new Date();
+			var formattedTime = date.toLocaleTimeString();
+			alert("Aktualna godzina: " + formattedTime);
+		}
+	</script>
+</head>
+<body>
+	
+	<!-- Pierwszy przycisk -->
+	<button onclick="przycisk1_banka()">
+		<img src="3.png" alt="Pierwszy przycisk" />
+		
+	</button>
+	
+	<!-- Drugi przycisk -->
+	<button onclick="przycisk2_banka()">
+		<img src="2.png" alt="Drugi przycisk" />
+		
+	</button>
+	
+	<!-- Trzeci przycisk -->
+	<button onclick="przycisk3_banka()">
+		<img src="1.png" alt="Trzeci przycisk" />
+		
+	</button>
+</body>
+</html>
+<!-- Norbert Bańka 3K -->
+
+		</textarea>
+	</center>
+		</body>
+</html>

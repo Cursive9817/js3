@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prosty stoper</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 25px;
+      flex-direction: column;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h3>Prosty stoper:</h3>
+  <br>
+  <button onclick="startStop()">Start/Stop</button>
+  <button onclick="reset()">Reset</button>
+  <h2 id="timer">00:00:00.00</h2>
+
+  <script>
+    var startTime;
+    var running = false;
+    var centiseconds = 0;
+
+    function startStop() {
+      if (running) {
+        // Stop the timer
+        running = false;
+        clearInterval(startTime);
+      } else {
+        // Start the timer
+        running = true;
+        startTime = setInterval(updateTimer, 10);
+      }
+    }
+
+    function reset() {
+      // Stop the timer and reset the time
+      running = false;
+      clearInterval(startTime);
+      centiseconds = 0;
+      document.getElementById('timer').textContent = '00:00:00.00';
+    }
+
+    function updateTimer() {
+      centiseconds++;
+
+      var hours = Math.floor(centiseconds / 360000);
+      var minutes = Math.floor((centiseconds % 360000) / 6000);
+      var seconds = Math.floor((centiseconds % 6000) / 100);
+      var cs = centiseconds % 100;
+
+      // Format the time
+      var formattedTime =
+        ('0' + hours).slice(-2) +
+        ':' +
+        ('0' + minutes).slice(-2) +
+        ':' +
+        ('0' + seconds).slice(-2) +
+        '.' +
+        ('0' + cs).slice(-2);
+
+      // Update the timer display
+      document.getElementById('timer').textContent = formattedTime;
+    }
+  </script>
+</body>
+</html>

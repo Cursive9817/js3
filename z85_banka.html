@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>zad 85 - Bańka</title>
+  </head>
+  <body>
+    <p id="dayOfWeek"></p>
+    <script>
+      const today = new Date();
+      const dayOfWeek = today.getDay();
+      let dayName;
+      switch (dayOfWeek) {
+        case 0:
+          dayName = "Niedziela";
+          break;
+        case 1:
+          dayName = "Poniedziałek";
+          break;
+        case 2:
+          dayName = "Wtorek";
+          break;
+        case 3:
+          dayName = "Środa";
+          break;
+        case 4:
+          dayName = "Czwartek";
+          break;
+        case 5:
+          dayName = "Piątek";
+          break;
+        case 6:
+          dayName = "Sobota";
+          break;
+        default:
+          dayName = "Nieznany dzien tygodnia!";
+          break;
+		  
+      }
+
+      const dayOfWeekElement = document.getElementById("dayOfWeek");
+      dayOfWeekElement.textContent = "Dzien tygodnia: " + dayName;
+    </script>
+  </body>
+</html>
+<!-- Norbert Bańka 3K -->

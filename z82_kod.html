@@ -1,0 +1,44 @@
+<html>
+	<head>
+	</head>
+		<body bgcolor="#9370DB">
+	<center>
+		<textarea name="nazwa" cols="60" rows="30" disabled>
+<html>
+<head>
+<title>zad 82 - Bańka</title>
+<script language="JavaScript">
+function pushbutton() {
+alert("Szczęść Boże!");}
+</script>
+</head>
+<body>
+<h1> <font color="red" size=8>Bańka</font></h1>
+<font color="green" size=5>
+Dziś=new Date()--> Jest to komenda która pozwalawykonywać operacje związane z czasem
+<br>Dziś=dzis.getHours()--> Komenda ta zwraca aktualną godzinę(od 0 do 23)bez minut
+<br>Dziś=dzis.getMinutes()--> Komenda ta pokazuje aktualne minuty(od 0 do 59) bez godzin
+<br>Dziś=dzis.getMonth+1()-->Komenda pokazuje aktualny miesiąc
+<br>Dziś=dzis.getDate--> komenda zwraca dzień miesiąca
+<br>Dziś=dzis.getFullYear()--> komenda zwraca aktualny rok
+</font>
+<script language="LiveScript">
+document.write("<br>Ostatno modifikowane ",document.lastModified,"<br>")
+</script>
+<form>
+<input type="button" name="Button1" value="Naciśnij mnie" onclick="pushbutton()">
+</form>
+<script language="JavaScript">
+dzis = new Date()
+document.write("<br>Aktualny czas: ",dzis.getHours(),":",dzis.getMinutes())
+//document.write("<br>Aktualna data: ",dzis.getDate(),".");
+//document.write(".",dzis.getMonth()+1,".");
+//document.write(,dzis.getFullYear());
+document.write("<br><font size=6>Aktualna data: <font color=red> ",dzis.getDate(),"</font>.<font color=green>",dzis.getMonth()+1,"</font>.<font color=blue>",dzis.getFullYear(),"</font></font>");
+</script>
+</body>
+</html>
+		</textarea>
+	</center>
+		</body>
+</html>

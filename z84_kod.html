@@ -1,0 +1,50 @@
+<html>
+	<head>
+	</head>
+		<body bgcolor="#9370DB">
+	<center>
+		<textarea name="nazwa" cols="60" rows="30" disabled>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zad 84 - Bańka</title>
+	<script>
+		function banka_start() {
+			start_ban = new Date();
+			poczatek_ban=start_ban.getTime()
+		}
+
+		function banka_stop() {
+			stop_ban = new Date();
+			koniec_ban=stop_ban.getTime()
+ 
+			roznica_ban=koniec_ban-poczatek_ban;
+			pokaz1.innerHTML=roznica_ban/1000+" s";
+		}
+
+	</script>
+</head>
+<body>
+<center>
+	<h1>Stoper - Bańka</h1>
+	<script language="JavaScript">
+	dzis_ban = new Date();
+	document.write("<br>Aktualny czas: ",dzis_ban.getHours(),":",dzis_ban.getMinutes());
+	</script>
+<br><br>
+	<input type="button" name="Button1" value="START stoper" onclick="banka_start()">
+	<input type="button" name="Button2" value="STOP stoper" onclick="banka_stop()">
+<br>
+<br>
+<table border=5>
+ <tr id="pokaz1"></tr>
+</table>
+</center>
+</body>
+</html>
+<!-- Norbert Bańka 3K -->
+
+		</textarea>
+	</center>
+		</body>
+</html>
